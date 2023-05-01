@@ -19,13 +19,11 @@ const getResult =(cityName) => {
     //console.log(query);
 }
 const displayResult = (result) => {
-    console.log(result);
+    //console.log(result);
     city.innerText = `${result.name}, ${result.sys.country}`;
     temp.innerText = `${Math.round(result.main.temp)}°C`;
     desc.innerText = result.weather[0].description;
-    console.log(desc);
     minmax.innerText = `${Math.round(result.main.temp_min)} °C / ${Math.round(result.main.temp_max)} °C`;
-    console.log(minmax);
 }
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keypress', setQuery);
